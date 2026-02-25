@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mizeck Victor Tembo | Software Engineer & Technical Support</title>
+  <meta name="description" content="Software Engineer and Technical Support specialist with 5+ years in financial systems, payment platforms, and digital banking.">
+  <meta name="keywords" content="Software Engineer, Technical Support, Financial Systems, Zambia, Lusaka">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --accent: #e8b86d;
+      --accent-light: #f5d49a;
+      --text-primary: #ccd6f6;
+      --text-secondary: #8892b0;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--navy);
+      color: var(--text-primary);
+    }
+
+    h1, h2, h3 {
+      font-family: 'DM Serif Display', serif;
+    }
+
+    /* ===== HEADER ===== */
+    #header {
+      background: rgba(10, 22, 40, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(232, 184, 109, 0.15);
+      padding: 16px 0;
+    }
+
+    .sitename {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--accent) !important;
+      letter-spacing: 0.02em;
+    }
+
+    .navmenu ul li a {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .navmenu ul li a:hover,
+    .navmenu ul li a.active {
+      color: var(--accent) !important;
+    }
+
+    .header-social-links a {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-left: 14px;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .header-social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(232, 184, 109, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(100, 149, 237, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 400;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .hero-stat .number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero-stat .label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary-custom {
+      background: var(--accent);
+      color: var(--navy);
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary-custom:hover {
+      background: var(--accent-light);
+      color: var(--navy);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 184, 109, 0.3);
+    }
+
+    .btn-outline-custom {
+      background: transparent;
+      color: var(--accent);
+      padding: 13px 32px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-outline-custom:hover {
+      background: rgba(232, 184, 109, 0.1);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-profile-img {
+      width: 380px;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 8px;
+      position: relative;
+      z-index: 2;
+      filter: grayscale(20%);
+      transition: filter 0.3s;
+    }
+
+    .hero-profile-img:hover { filter: grayscale(0%); }
+
+    .hero-image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0.1px;
+      left: 46%;
+      transform: translateX(-50%) translateX(20px);
+      width: 380px;
+      height: 440px;
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      z-index: 1;
+      opacity: 0.4;
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title-custom {
+      margin-bottom: 60px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .section-heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      background: var(--navy-mid);
+      padding: 100px 0;
+    }
+
+    .about-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .about-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 8px;
+      filter: grayscale(15%);
+      display: block;
+    }
+
+    .about-text {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .info-item-custom .info-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .info-item-custom .info-value {
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    /* ===== TECH STACK ===== */
+    #techstack {
+      background: var(--navy);
+      padding: 100px 0;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .tech-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 20px 12px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .tech-item:hover {
+      border-color: rgba(232, 184, 109, 0.3);
+      background: rgba(232, 184, 109, 0.04);
+      transform: translateY(-4px);
+    }
+
+    .tech-item i {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .tech-item span {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* ===== SKILLS ===== */
+    #skills {
+      background: var(--navy-mid);
+      padding: 100px 0;
+    }
+
+    .skill-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 32px 28px;
+      height: 100%;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .skill-card:hover {
+      border-color: rgba(232, 184, 109, 0.2);
+      transform: translateY(-6px);
+    }
+
+    .skill-card:hover::before { opacity: 1; }
+
+    .skill-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .skill-card p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .skill-percent {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-align: right;
+      margin-bottom: 6px;
+    }
+
+    .skill-bar {
+      height: 3px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      border-radius: 2px;
+      transition: width 1.5s ease;
+    }
+
+    /* ===== RESUME ===== */
+    #resume {
+      background: var(--navy);
+      padding: 100px 0;
+    }
+
+    .timeline-custom {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline-custom::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 0;
+      width: 1px;
+      background: rgba(232, 184, 109, 0.2);
+    }
+
+    .timeline-item-custom {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .timeline-item-custom::before {
+      content: '';
+      position: absolute;
+      left: -37px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--navy);
+      box-shadow: 0 0 0 4px rgba(232, 184, 109, 0.15);
+    }
+
+    .timeline-period {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .timeline-company {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .timeline-position {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .timeline-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .timeline-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .timeline-list li {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      padding: 4px 0 4px 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .timeline-list li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .resume-block-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .resume-block-sub {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+    }
+
+    /* ===== PORTFOLIO ===== */
+    #portfolio {
+      background: var(--navy-mid);
+      padding: 100px 0;
+    }
+
+    .portfolio-card-custom {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .portfolio-card-custom:hover {
+      border-color: rgba(232, 184, 109, 0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .portfolio-img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .portfolio-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .portfolio-card-custom:hover .portfolio-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-overlay-custom {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 22, 40, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .portfolio-card-custom:hover .portfolio-overlay-custom { opacity: 1; }
+
+    .portfolio-overlay-custom a {
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin: 0 10px;
+      transition: transform 0.2s;
+    }
+
+    .portfolio-overlay-custom a:hover { transform: scale(1.2); }
+
+    .portfolio-body {
+      padding: 24px;
+    }
+
+    .portfolio-cat {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .portfolio-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .portfolio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .portfolio-tag {
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(232, 184, 109, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(232, 184, 109, 0.2);
+      font-weight: 500;
+    }
+
+    /* ===== SERVICES ===== */
+    #services {
+      background: var(--navy);
+      padding: 100px 0;
+    }
+
+    .service-card-custom {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 32px 28px;
+      height: 100%;
+      transition: all 0.3s;
+    }
+
+    .service-card-custom:hover {
+      border-color: rgba(232, 184, 109, 0.25);
+      transform: translateY(-6px);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(232, 184, 109, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-icon i {
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+
+    .service-card-custom h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .service-card-custom p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      background: var(--navy-mid);
+      padding: 100px 0;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .contact-info-item:last-of-type { border-bottom: none; }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(232, 184, 109, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon i {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .contact-info-item .ci-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+
+    .contact-info-item .ci-value {
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .contact-form-custom {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 40px;
+    }
+
+    .contact-form-custom .form-control {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--text-primary);
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+
+    .contact-form-custom .form-control:focus {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(232, 184, 109, 0.4);
+      box-shadow: none;
+      color: var(--text-primary);
+      outline: none;
+    }
+
+    .contact-form-custom .form-control::placeholder {
+      color: var(--text-secondary);
+      opacity: 0.7;
+    }
+
+    .btn-submit-custom {
+      background: var(--accent);
+      color: var(--navy);
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-submit-custom:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 184, 109, 0.3);
+    }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 0;
+    }
+
+    .footer-text {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .footer-social a {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+
+    .footer-social a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ===== SCROLL TOP ===== */
+    .scroll-top-custom {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      color: var(--navy);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      transition: all 0.3s;
+      z-index: 999;
+      font-size: 1.1rem;
+    }
+
+    .scroll-top-custom.show { opacity: 1; }
+    .scroll-top-custom:hover {
+      background: var(--accent-light);
+      color: var(--navy);
+      transform: translateY(-3px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-stats { gap: 24px; }
+      .hero-profile-img { width: 260px; height: 300px; }
+      .hero-image-wrapper::before { width: 260px; height: 300px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .contact-form-custom { padding: 24px; }
+    }
+
+    /* Divider */
+    .section-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.04);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" style="text-decoration:none;">
+        <h1 class="sitename mb-0">Mizeck Tembo</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://www.linkedin.com/in/mizeck" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/share/18LdUj7Wi5/?mibextid=wwXIfr" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="http://wa.me/260970575487" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@officially_miz" target="_blank"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6">
+            <div class="hero-eyebrow">Based in Lusaka, Zambia</div>
+            <h1 class="hero-name">Mizeck Victor Tembo</h1>
+            <p class="hero-subtitle">Software Engineer & Technical Support Expert</p>
+            <p class="hero-description">
+              5+ years building mission-critical financial systems and payment platforms. I keep systems running, clients happy, and teams moving forward.
+            </p>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="number">99.5%</div>
+                <div class="label">System Uptime</div>
+              </div>
+              <div class="hero-stat">
+                <div class="number">92%</div>
+                <div class="label">First-Contact Resolution</div>
+              </div>
+              <div class="hero-stat">
+                <div class="number">5+</div>
+                <div class="label">Years Experience</div>
+              </div>
+            </div>
+            <div class="hero-buttons">
+              <a href="#portfolio" class="btn-primary-custom">View My Work <i class="bi bi-arrow-right"></i></a>
+              <a href="assets/cv/Mizeck_Victor_Tembo_CV.pdf" target="_blank" download class="btn-outline-custom"><i class="bi bi-download"></i> Download CV</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image-wrapper">
+              <img src="assets/img/profile/image.png" alt="Mizeck Victor Tembo" class="hero-profile-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-5">
+            <div class="about-img-wrapper">
+              <img src="assets/img/10.jpeg" alt="Mizeck Victor Tembo" class="about-img">
+            </div>
+          </div>
+          <div class="col-lg-7 ps-lg-5">
+            <div class="section-title-custom">
+              <div class="section-eyebrow">About Me</div>
+              <h2 class="section-heading">Software Engineer &<br>Support Specialist</h2>
+            </div>
+            <p class="about-text">
+              I'm a Software Engineer and Technical Support specialist with over 5 years of hands-on experience in financial systems, payment platforms, and digital banking applications. Based in Lusaka, Zambia, I combine deep technical knowledge with a passion for delivering reliable, high-performance solutions.
+            </p>
+            <p class="about-text">
+              At Probase Limited, I've built and maintained financial management systems serving 1,000+ users, led quality assurance initiatives, and mentored junior developers — all while maintaining near-perfect system uptime. I thrive at the intersection of engineering and client success.
+            </p>
+            <div class="info-grid">
+              <div class="info-item-custom">
+                <div class="info-label">Name</div>
+                <div class="info-value">Mizeck Victor Tembo</div>
+              </div>
+              <div class="info-item-custom">
+                <div class="info-label">Phone</div>
+                <div class="info-value">+260 970 575 487</div>
+              </div>
+              <div class="info-item-custom">
+                <div class="info-label">Location</div>
+                <div class="info-value">Lusaka, Zambia</div>
+              </div>
+              <div class="info-item-custom">
+                <div class="info-label">Email</div>
+                <div class="info-value">mizeckvictortemb@gmail.com</div>
+              </div>
+              <div class="info-item-custom">
+                <div class="info-label">Experience</div>
+                <div class="info-value">5+ Years</div>
+              </div>
+              <div class="info-item-custom">
+                <div class="info-label">Languages</div>
+                <div class="info-value">English, Bemba, Nyanja</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TECH STACK ===== -->
+    <section id="techstack">
+      <div class="container">
+        <div class="section-title-custom text-center">
+          <div class="section-eyebrow" style="justify-content:center;">Technologies</div>
+          <h2 class="section-heading">Tech Stack & Tools</h2>
+          <p class="section-desc mx-auto">The languages, frameworks, and tools I use to build and support production systems</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-item"><i class="bi bi-database"></i><span>PostgreSQL</span></div>
+          <div class="tech-item"><i class="bi bi-lightning"></i><span>Elixir</span></div>
+          <div class="tech-item"><i class="bi bi-globe"></i><span>Phoenix LiveView</span></div>
+          <div class="tech-item"><i class="bi bi-palette"></i><span>Tailwind CSS</span></div>
+          <div class="tech-item"><i class="bi bi-diagram-3"></i><span>REST APIs</span></div>
+          <div class="tech-item"><i class="bi bi-shield-check"></i><span>UAT & QA</span></div>
+          <div class="tech-item"><i class="bi bi-graph-up"></i><span>Monitoring</span></div>
+          <div class="tech-item"><i class="bi bi-cash-stack"></i><span>FinTech Systems</span></div>
+          <div class="tech-item"><i class="bi bi-credit-card"></i><span>Payment Platforms</span></div>
+          <div class="tech-item"><i class="bi bi-people"></i><span>Team Leadership</span></div>
+          <div class="tech-item"><i class="bi bi-headset"></i><span>Client Support</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-title-custom text-center">
+          <div class="section-eyebrow" style="justify-content:center;">Expertise</div>
+          <h2 class="section-heading">Core Skills</h2>
+          <p class="section-desc mx-auto">Areas where I bring deep experience and measurable results</p>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-card">
+              <h3>Financial Systems</h3>
+              <p>5+ years building robust financial management systems with 99.5% uptime across 1,000+ users.</p>
+              <div class="skill-percent">95%</div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-card">
+              <h3>Database Design</h3>
+              <p>Expert in PostgreSQL modelling, schema design, query optimization, and caching with Redis.</p>
+              <div class="skill-percent">92%</div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:92%"></div></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-card">
+              <h3>Testing & QA</h3>
+              <p>UAT protocols, stress testing, and quality assurance for high-volume production systems.</p>
+              <div class="skill-percent">90%</div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-card">
+              <h3>Technical Support</h3>
+              <p>92% first-contact resolution, client collaboration, escalation management, and training.</p>
+              <div class="skill-percent">95%</div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:95%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESUME ===== -->
+    <section id="resume">
+      <div class="container">
+        <div class="section-title-custom text-center">
+          <div class="section-eyebrow" style="justify-content:center;">Experience</div>
+          <h2 class="section-heading">Resume</h2>
+          <p class="section-desc mx-auto">My professional journey in software engineering and technical support</p>
+        </div>
+
+        <div class="row g-5 mt-2">
+          <!-- Work Experience -->
+          <div class="col-lg-7">
+            <div class="resume-block-title">Work Experience</div>
+            <div class="resume-block-sub">Results-driven professional with proven experience in full-stack development and technical support.</div>
+            <div class="timeline-custom">
+
+              <div class="timeline-item-custom">
+                <div class="timeline-period">Jan 2025 – Present</div>
+                <div class="timeline-company">Probase Limited</div>
+                <div class="timeline-position">Technical Support & Collaboration Expert</div>
+                <div class="timeline-desc">Lead technical support operations for 50+ clients on financial platforms.</div>
+                <ul class="timeline-list">
+                  <li>Achieve 92% issue resolution before escalation across 50+ clients</li>
+                  <li>Investigate transaction failures and perform root cause analysis to prevent recurrence</li>
+                  <li>Monitor system performance and conduct stress testing for high transaction volumes</li>
+                  <li>Lead client training and coordinate change control for smooth deployments</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item-custom">
+                <div class="timeline-period">Jan 2021 – Present</div>
+                <div class="timeline-company">Probase Limited</div>
+                <div class="timeline-position">Software Engineer</div>
+                <div class="timeline-desc">Built and maintained multiple financial management systems and led QA initiatives.</div>
+                <ul class="timeline-list">
+                  <li>Built 5+ financial systems serving 1,000+ users with 99.5% availability</li>
+                  <li>Improved system reliability by 35% and reduced critical incidents by 40%</li>
+                  <li>Implemented UAT protocols and coordinated upgrades with minimal disruption</li>
+                  <li>Mentored 3 junior developers, improving team productivity by 30%</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item-custom">
+                <div class="timeline-period">Jan 2020 – Dec 2020</div>
+                <div class="timeline-company">Ideate Innovations Zambia</div>
+                <div class="timeline-position">Software Engineer</div>
+                <ul class="timeline-list">
+                  <li>Developed social community platform for 500+ users with real-time engagement features</li>
+                  <li>Optimized PostgreSQL schema improving query performance by 45%</li>
+                  <li>Implemented Redis caching reducing API response times by 50%</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item-custom">
+                <div class="timeline-period">Jan 2020 – Dec 2020</div>
+                <div class="timeline-company">LetsDoGood Zambia</div>
+                <div class="timeline-position">Software Engineer</div>
+                <ul class="timeline-list">
+                  <li>Developed social community platform for 500+ users</li>
+                  <li>Conducted database modelling, schema design, and optimization</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="col-lg-5">
+            <div class="resume-block-title">Education</div>
+            <div class="resume-block-sub">Academic foundation and continuous professional development.</div>
+            <div class="timeline-custom">
+
+              <div class="timeline-item-custom">
+                <div class="timeline-period">2017 – 2021</div>
+                <div class="timeline-company">University of Lusaka</div>
+                <div class="timeline-position">BSc. Information Systems & Technology</div>
+                <div class="timeline-desc">Studied software development, systems analysis, database management, and IT fundamentals.</div>
+              </div>
+
+              <div class="timeline-item-custom">
+                <div class="timeline-period">2021 – Present</div>
+                <div class="timeline-company">Professional Credentials</div>
+                <div class="timeline-position">Certifications & Memberships</div>
+                <ul class="timeline-list">
+                  <li>Certificate in Leadership Development — Berelevant Leadership Academy (2024)</li>
+                  <li>Professional Member — ICTAZ (ICT Association of Zambia)</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-title-custom text-center">
+          <div class="section-eyebrow" style="justify-content:center;">Portfolio</div>
+          <h2 class="section-heading">Featured Projects</h2>
+          <p class="section-desc mx-auto">A selection of financial systems and web applications I've built</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-card-custom">
+              <div class="portfolio-img-wrap">
+                <img src="assets/img/Kasaka.png" alt="Kasaka Financial Service">
+                <div class="portfolio-overlay-custom">
+                  <a href="assets/img/Kasaka.png" class="glightbox" data-gallery="portfolio"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-body">
+                <div class="portfolio-cat">Web Application</div>
+                <div class="portfolio-title">Kasaka Financial Service</div>
+                <div class="portfolio-desc">Real-time transaction processing platform with live UI updates, background job handling, and high-availability financial workflows.</div>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">Elixir</span>
+                  <span class="portfolio-tag">Phoenix LiveView</span>
+                  <span class="portfolio-tag">PostgreSQL</span>
+                  <span class="portfolio-tag">Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-card-custom">
+              <div class="portfolio-img-wrap">
+                <img src="assets/img/kasaka-enterprise.png" alt="Kasaka Enterprise">
+                <div class="portfolio-overlay-custom">
+                  <a href="assets/img/kasaka-enterprise.png" class="glightbox" data-gallery="portfolio"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-body">
+                <div class="portfolio-cat">Enterprise System</div>
+                <div class="portfolio-title">Kasaka Enterprise</div>
+                <div class="portfolio-desc">Multi-tenant enterprise suite with real-time dashboards, role-based access control, and scalable financial transaction handling.</div>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">Elixir</span>
+                  <span class="portfolio-tag">Phoenix LiveView</span>
+                  <span class="portfolio-tag">Multi-tenant</span>
+                  <span class="portfolio-tag">RBAC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-card-custom">
+              <div class="portfolio-img-wrap">
+                <img src="assets/img/pbs-lms.png" alt="PBS Loan Management System">
+                <div class="portfolio-overlay-custom">
+                  <a href="assets/img/pbs-lms.png" class="glightbox" data-gallery="portfolio"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-body">
+                <div class="portfolio-cat">Full-Stack System</div>
+                <div class="portfolio-title">PBS Loan Management System</div>
+                <div class="portfolio-desc">Complete loan lifecycle system covering origination, amortization, repayment tracking, and automated notifications for loan officers.</div>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">Elixir</span>
+                  <span class="portfolio-tag">Loan Processing</span>
+                  <span class="portfolio-tag">PostgreSQL</span>
+                  <span class="portfolio-tag">Background Jobs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-card-custom">
+              <div class="portfolio-img-wrap">
+                <img src="assets/img/sms-gateway.png" alt="Probase SMS Gateway">
+                <div class="portfolio-overlay-custom">
+                  <a href="assets/img/sms-gateway.png" class="glightbox" data-gallery="portfolio"><i class="bi bi-eye"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-body">
+                <div class="portfolio-cat">Support &amp; Integration</div>
+                <div class="portfolio-title">Probase SMS Gateway</div>
+                <div class="portfolio-desc">Provided technical support and maintenance for the Probase SMS Gateway, ensuring reliable message delivery for financial alerts, transaction notifications, and client communications across banking platforms.</div>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">SMS Gateway</span>
+                  <span class="portfolio-tag">Technical Support</span>
+                  <span class="portfolio-tag">Financial Alerts</span>
+                  <span class="portfolio-tag">System Integration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title-custom text-center">
+          <div class="section-eyebrow" style="justify-content:center;">What I Offer</div>
+          <h2 class="section-heading">Services & Expertise</h2>
+          <p class="section-desc mx-auto">Combining engineering depth with professional support to deliver reliable financial technology solutions</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card-custom">
+              <div class="service-icon"><i class="bi bi-cash-stack"></i></div>
+              <h3>Financial System Development</h3>
+              <p>Design and build robust, high-availability financial platforms including loan management, payment processing, and banking systems.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card-custom">
+              <div class="service-icon"><i class="bi bi-headset"></i></div>
+              <h3>Enterprise Technical Support</h3>
+              <p>Professional troubleshooting, root cause analysis, and ongoing support for mission-critical enterprise applications.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card-custom">
+              <div class="service-icon"><i class="bi bi-diagram-3"></i></div>
+              <h3>API Design & Integration</h3>
+              <p>Develop and integrate RESTful APIs connecting payment platforms, banking systems, and third-party financial services.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card-custom">
+              <div class="service-icon"><i class="bi bi-shield-check"></i></div>
+              <h3>QA & Performance Optimization</h3>
+              <p>UAT protocol design, stress testing, and system optimization to improve reliability and reduce critical incidents.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <div class="section-title-custom">
+              <div class="section-eyebrow">Contact</div>
+              <h2 class="section-heading">Let's Work Together</h2>
+              <p class="section-desc">I'm open to new opportunities and collaborations. Feel free to reach out — I respond promptly.</p>
+            </div>
+
+            <div class="mt-4">
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="bi bi-envelope-at"></i></div>
+                <div>
+                  <div class="ci-label">Email</div>
+                  <div class="ci-value">mizeckvictortembo@gmail.com</div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+                <div>
+                  <div class="ci-label">Phone / WhatsApp</div>
+                  <div class="ci-value">+260 970 575 487</div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <div class="ci-label">Location</div>
+                  <div class="ci-value">Lusaka, Zambia</div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+                <div>
+                  <div class="ci-label">LinkedIn</div>
+                  <div class="ci-value">linkedin.com/in/mizeck</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form-custom">
+              <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                  </div>
+                  <div class="col-12">
+                    <textarea name="message" class="form-control" rows="6" placeholder="Your message..." required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-submit-custom">Send Message <i class="bi bi-send ms-2"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/mizeck" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/share/18LdUj7Wi5/?mibextid=wwXIfr" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="http://wa.me/260970575487" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@officially_miz" target="_blank"><i class="bi bi-tiktok"></i></a>
+      </div>
+      <p class="footer-text">© <span id="copyright-year"></span> Mizeck Victor Tembo — All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <a href="#" class="scroll-top-custom" id="scrollTop"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+  <script>
+    // Copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    // Scroll top button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('show', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Init AOS
+    if (typeof AOS !== 'undefined') AOS.init({ duration: 600, once: true });
+
+    // Init GLightbox
+    if (typeof GLightbox !== 'undefined') GLightbox({ selector: '.glightbox' });
+  </script>
+
+</body>
+</html>
