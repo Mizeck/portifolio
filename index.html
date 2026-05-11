@@ -117,13 +117,23 @@
     }
 
     /* ===== HEADER ===== */
+/* ===== HEADER ===== */
     #header {
-      background: rgba(10, 22, 40, 0.95);
+      background: rgba(10, 22, 40, 0.97) !important;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(232, 184, 109, 0.15);
       padding: 16px 0;
+      /* Override any Bootstrap theme that adds border-radius or box-shadow */
+      border-radius: 0 !important;
+      box-shadow: none !important;
     }
 
+    /* Force the inner container to also be dark */
+    #header .header-container {
+      background: transparent !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
     .sitename {
       font-family: 'DM Serif Display', serif;
       font-size: 1.3rem;
@@ -961,11 +971,142 @@
       .contact-form-custom { padding: 24px; }
     }
 
+
+
+
+
+
+
+
     /* Divider */
     .section-divider {
       height: 1px;
       background: rgba(255,255,255,0.04);
     }
+
+
+
+    @media (max-width: 1199px) {
+
+  /* ── Slide-out panel ── */
+  .navmenu {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background: #112240 !important;
+    border-left: 2px solid rgba(232, 184, 109, 0.3) !important;
+    padding: 80px 24px 24px !important;
+    transition: right 0.3s ease !important;
+    z-index: 9998 !important;
+    overflow-y: auto !important;
+    display: block !important;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .navmenu.mobile-nav-active {
+    right: 0 !important;
+  }
+
+  /* ── Nav list ── */
+  .navmenu ul {
+    display: flex !important;
+    flex-direction: column !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  .navmenu ul li {
+    display: block !important;
+    width: 100% !important;
+    background: transparent !important;
+  }
+
+  /* ── Nav links ── */
+  .navmenu ul li a {
+    display: block !important;
+    padding: 16px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: #ccd6f6 !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    transition: color 0.2s, padding-left 0.2s !important;
+  }
+
+  .navmenu ul li a:hover,
+  .navmenu ul li a.active {
+    color: #e8b86d !important;
+    padding-left: 10px !important;
+    background: transparent !important;
+  }
+
+  /* ── Dark overlay behind panel ── */
+  .navmenu.mobile-nav-active::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    right: 280px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+
+  /* ── Hamburger / X toggle ── */
+  .mobile-nav-toggle {
+    position: relative !important;
+    z-index: 9999 !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    color: #e8b86d !important;
+    padding: 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* ── Header bar ── */
+  #header {
+    padding: 10px 0 !important;
+    background: rgba(10, 22, 40, 0.97) !important;
+  }
+
+  #header .header-container {
+    padding: 0 16px !important;
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
+    background: transparent !important;
+  }
+
+  /* ── Logo single line ── */
+  .sitename {
+    font-size: 1.05rem !important;
+    white-space: nowrap !important;
+    color: #e8b86d !important;
+  }
+
+  /* ── Social icons ── */
+  .header-social-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    margin-left: auto !important;
+    margin-right: 12px !important;
+  }
+
+  .header-social-links a {
+    font-size: 0.95rem !important;
+    margin-left: 12px !important;
+    color: #8892b0 !important;
+  }
+}
+
+
+
+
   </style>
 </head>
 
@@ -989,9 +1130,9 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+       
       </nav>
-
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       <div class="header-social-links">
         <a href="https://www.linkedin.com/in/mizeck" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/Mizeck" target="_blank"><i class="bi bi-github"></i></a>
@@ -1564,6 +1705,26 @@
 
     // Init GLightbox
     if (typeof GLightbox !== 'undefined') GLightbox({ selector: '.glightbox' });
+  </script>
+
+  <script>
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.querySelector('.navmenu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('mobile-nav-active');
+      navToggle.classList.toggle('bi-list');
+      navToggle.classList.toggle('bi-x');
+    });
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.navmenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-nav-active');
+        navToggle.classList.add('bi-list');
+        navToggle.classList.remove('bi-x');
+      });
+    });
   </script>
 
 </body>
